@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+body {
+  margin: 0;
+  font-family: "League Spartan", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0fafb;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.container main {
+  display: flex;
+  justify-content: center;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+}
+.container header {
+  background-image: url("/public/images/bg-header-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #5da5a4;
+  height: 30vh;
+  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+.clear {
+  color: #82b8b7;
+  margin-right: 2rem;
+}
+.clear:hover {
+  text-decoration: underline;
+  color: #60a5a4;
+  cursor: pointer;
+}
+.tagsFiltered {
+  box-shadow: rgba(216, 236, 237, 255) 0px 7px 29px 0px;
+  border-radius: 6px;
+  background-color: white;
+  width: 80%;
+  padding: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 70%;
+}
+.tagsFiltered div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-left: 0.75rem;
+}
+.tagsFiltered span:nth-child(1) {
+  background-color: #eff6f6;
+  padding: 0.75rem;
+  border-radius: 5px 0 0 5px;
+  color: #91babd;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+.tagsFiltered span:nth-child(2) {
+  border-radius: 0 5px 5px 0;
+  background-color: #6ab8b6;
+  color: white;
+  padding: 0.5rem;
+}
+.tagsFiltered span:nth-child(2):hover {
+  background-color: #283939;
+  cursor: pointer;
+}
+.jobs {
+  background-color: white;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: rgba(216, 236, 237, 255) 0px 7px 29px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.jobs:nth-child(1),
+.jobs:nth-child(2),
+.jobs:hover {
+  border-left: 5px solid #73aeab;
+}
+.jobs > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin-left: 1rem;
+}
+.jobs > div:nth-child(1) section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+h3 {
+  margin: 0;
+  color: #89b8b1;
+}
+.description {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+.description:hover {
+  color: #64a7a1;
+  cursor: pointer;
+}
+.new {
+  margin-left: 1rem;
+  color: white;
+  background-color: #5ea2a2;
+  border-radius: 20px;
+  padding: 5px 7px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+.featured {
+  margin-left: 0.5rem;
+  color: #f9fdfd;
+  background-color: #2b3939;
+  padding: 5px 7px;
+  border-radius: 20px;
+  font-weight: 600;
+
+  font-size: 12px;
+}
+.jobs > div:nth-child(1) > div:nth-child(2) {
+  width: 100%;
+  margin-left: 1rem;
+}
+.jobs > div:nth-child(1) > div:nth-child(2) ul {
+  display: flex;
+}
+.jobs > div:nth-child(2) {
+  width: 50%;
+}
+.jobs > div:nth-child(2) ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.details {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+.details li {
+  margin-right: 0.5rem;
+  color: #a5abaa;
+  display: flex;
+  align-items: center;
+}
+.details li p {
+  margin: 0.5rem 0 0 0;
+}
+.dot {
+  margin-left: 0.5rem;
+}
+.tags li {
+  background-color: #eff6f6;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #91babd;
+  font-weight: 600;
+  text-align: center;
+  margin-left: 0.75rem;
+}
+.tags li:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #5fa4a5;
+}
+@media (max-width: 1012px) {
+  .description,
+  h3 {
+    font-size: 1rem;
+  }
+  .new,
+  .featured {
+    font-size: 11px;
+  }
+  .details li p {
+    font-size: 14px;
+  }
+  .tags li {
+    font-size: 14px;
+  }
+  .jobs {
+    padding: 0.75rem;
+  }
+  .jobs > div:nth-child(1) {
+    margin-left: 0;
+  }
+  .tags li {
+    margin-left: 0.25rem;
+    margin-top: 0.5rem;
+  }
+  .tagsFiltered {
+    padding: 0.75rem 0;
+  }
+}
+@media (max-width: 768px) {
+  .container header {
+    margin-bottom: 7rem;
+  }
+  .jobs {
+    display: block;
+  }
+  .jobs > div:nth-child(1),
+  .jobs > div:nth-child(2) {
+    width: 100%;
+  }
+  .jobs > div:nth-child(1) section {
+    justify-content: center;
+  }
+  .jobs > div:nth-child(1) {
+    padding-bottom: 0.5rem;
+  }
+  .tags {
+    border-top: 0.5px solid #bccaca;
+    padding-top: 0.5rem;
+  }
+  .jobs > div:nth-child(2) ul {
+    justify-content: space-evenly;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  .new,
+  .featured {
+    margin-left: 2rem;
+  }
+  .description {
+    text-align: center;
+    font-size: 1.25rem;
+    overflow: hidden;
+  }
+  .details {
+    width: 100%;
+    justify-content: center;
+  }
+  .tagsFiltered div {
+    font-size: 14px;
+  }
+}
+@media (max-width: 475px) {
+  .container header {
+    background-image: url("/public/images/bg-header-mobile.svg");
+    height: 30vh;
+    margin-bottom: 6rem;
+  }
+  ul {
+    width: 90%;
+  }
+  .jobs {
+    position: relative;
+
+    margin-bottom: 3rem;
+    padding-top: 3.75rem;
+  }
+  .jobs img {
+    position: absolute;
+    top: -30px;
+    width: 80px;
+  }
+
+  .jobs > div:nth-child(1) section {
+    justify-content: flex-start;
+  }
+  .jobs > div:nth-child(2) ul {
+    justify-content: flex-start;
+  }
+
+  .description {
+    text-align: left;
+    font-size: 1rem;
+  }
+  .new {
+    margin-left: 0.5rem;
+  }
+  .featured {
+    margin-left: 0.25rem;
+  }
+  .jobs > div:nth-child(1) > div:nth-child(2) ul {
+    justify-content: flex-start;
+  }
+  .details li {
+    font-size: 12px;
+  }
+  .tagsFiltered {
+    width: 90%;
+    top: 84%;
+  }
+  .tagsFiltered div {
+    font-size: 12px;
+  }
+  .jobs > div:nth-child(1) section {
+    flex-wrap: wrap;
+  }
+  .tagsFiltered span:nth-child(1) {
+    padding: 0.5rem;
+  }
+  .tagsFiltered span:nth-child(2) {
+    padding: 0.25rem;
+  }
+}
+@media (max-width: 375px) {
+  .container header {
+    height: 25vh;
+    margin-bottom: 8rem;
+  }
+  .jobs img {
+    top: -25px;
+    width: 60px;
+  }
+  .tagsFiltered {
+    top: 78%;
+  }
+}
